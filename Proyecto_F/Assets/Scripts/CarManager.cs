@@ -1,10 +1,3 @@
-using System;
-using System.Collections;
-using UnityEngine;
-using System.Threading.Tasks;
-using Unity.VisualScripting.Dependencies.NCalc;
-using System.Threading;
-
 public class CarManager : MonoBehaviour
 {
     public Transform[] m_SpawPoints;  // Punto de partida del jugador 
@@ -88,7 +81,7 @@ public class CarManager : MonoBehaviour
         //{
         //    SpawnNewCar();
         //}
-        
+
 
         //yield return new WaitForSeconds(7);
         //}
@@ -99,10 +92,10 @@ public class CarManager : MonoBehaviour
 
         //await Task.Delay(TimeSpan.FromSeconds(5));
         //int RandomNumber = Mathf.RoundToInt(UnityEngine.Random.Range(0f, m_SpawPoints.Length - 1));
-        int RandomNumber = Mathf.RoundToInt(UnityEngine.Random.Range(0,3));
-        int RandomSpawn = Mathf.RoundToInt(UnityEngine.Random.Range(0,3));
+        int RandomNumber = Mathf.RoundToInt(UnityEngine.Random.Range(0, 3));
+        int RandomSpawn = Mathf.RoundToInt(UnityEngine.Random.Range(0f, m_CarPrefab.Length - 1));
 
-        
+
         Instantiate(m_CarPrefab[RandomSpawn], m_SpawPoints[RandomNumber].transform.position, Quaternion.identity);
         DoDelaySpawn(1);
 
