@@ -54,9 +54,13 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.vscode
 
 # Crashlytics generated file
 crashlytics-build.properties
 Lab_4
 Lab1B
 Lab2
+clase.wlt
+*__pycache__
+*venv
