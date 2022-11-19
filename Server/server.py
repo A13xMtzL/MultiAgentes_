@@ -1,19 +1,13 @@
 from flask import Flask, request
-from flask import jsonify
-from flask.json import dumps
+from utils.converter import to_json, message_to_json
 
 from system.model import HighWay
-from utils.converter import message_to_json, to_json
-
-# Funciones que nos permiten convertir los datos de los agentes en un formato JSON
-
-# -------------------------------
-# ----------------------------- #
 
 
+# Se inicializa la aplicacion
 app = Flask(__name__)
 
-model = HighWay(3, 50, 30)
+model = HighWay(50, 3, 30)
 
 
 @app.route('/', methods=['GET'])
@@ -63,10 +57,3 @@ def step_model():
 @app.route('/info', methods=['GET'])
 def info_model():
     return message_to_json(model.__str__())
-
-# Hace un guardado de la animación del modelo
-
-
-@app.route('/save', methods=['GET'])
-def save_model():
-    return message_to_json('Saving the app')

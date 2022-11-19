@@ -14,6 +14,8 @@ from system.agent import CarSimulation
 class HighWay (Model):
     def __init__(self, width, height, initial_population=4):
         self.step_count = 0
+        self.width = width
+        self.height = height
         self.schedule = BaseScheduler(self)
         self.grid = SingleGrid(width, height, False)
         self.initial_population = initial_population
@@ -46,13 +48,13 @@ class HighWay (Model):
             self.id_increment += 1
 
     def __str__(self):
-        return f"Street ID: {self.unique_id}, Width: {self.width}, Max number of cars: {self.max_num_cars}, Time: {self.time}, Time to stop: {self.time_stop}, Range: {self.range_stop}, Max speed: {self.max_speed}, Max steps: {self.max_steps}"
+        return f"Width: {self.width},Height: {self.height}, Numero de carros iniciales: {self.initial_population}"
 
     def json(self):
 
-        positions_list = []
-        for idx in range(0, len(self.schedule.agents)):
-            p = self.schedule.agents[idx].json()
-            positions_list.append(p)
-        positions = positions_list
-        return {"unique_id": self.unique_id, "width": self.width, "height": self.height, "max_num_cars": self.max_num_cars, "time": self.time, "time_stop": self.time_stop, "range_stop": self.range_stop, "max_speed": self.max_speed, "max_steps": self.max_steps, "positions": positions, "step_count": self.step_count}
+        # positions_list = []
+        # for idx in range(0, len(self.schedule.num_agents)):
+        #     p = self.schedule.num_agents[idx].json()
+        #     positions_list.append(p)
+        # positions = positions_list
+        return {"width": self.width, "height": self.height, "initial_population": self.initial_population}
