@@ -1,13 +1,13 @@
 from flask import Flask, request
 from utils.converter import to_json, message_to_json
 
-from system.model import HighWay
+from system.model import Highway
 
 
 # Se inicializa la aplicacion
 app = Flask(__name__)
 
-model = HighWay(50, 3, 30)
+model = Highway(3, 200)
 
 
 @app.route('/', methods=['GET'])
@@ -22,11 +22,11 @@ def initial_model():
     # Get the parameters
     width = request.json['width']
     height = request.json['height']
-    initial_population = request.json['initial_population']
+    # initial_population = request.json['initial_population']
 
     # Se inicializa el modelo
     global model
-    model = HighWay(width, height, initial_population)
+    model = Highway(width, height)
 
     # Retorno del mensaje
     return to_json(model.json())
@@ -39,7 +39,7 @@ def reset_model():
 
     global model
 
-    model = HighWay(3, 50, 30)
+    model = Highway(3, 200)
 
     return message_to_json('Reset the model')
 
