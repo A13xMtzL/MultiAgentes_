@@ -100,7 +100,7 @@ class Highway(Model):
         # if self.id_increment < self.initial_population and self.id_increment >= 0:
         prob = random.randint(0, 3)
         if prob == 1 or prob == 3:
-            if self.steps > 30 and self.chose == 0:
+            if self.steps > 9 and self.chose == 0:
                 pos_x = 1
                 pos_y = 0
 

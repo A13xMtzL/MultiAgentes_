@@ -15,7 +15,7 @@ from mesa.datacollection import DataCollector
 
 
 LIMIT_RANGE = 20
-STOP = 30
+STOP = 10
 
 
 # class CarSimulation(Agent):
@@ -157,4 +157,4 @@ class CarAgent(Agent):
         return f"Id del vehiculo: {self.unique_id}, Posicion en x : {self.pos_x}, Posicion en y : {self.pos_y}, Velocidad: {self.speed}, Elegido: {self.choosen}"
 
     def json(self):
-        return {"Pos_x: ": int(self.pos[0]), "Pos_y: ": int(self.pos[1]), "unique_id": self.unique_id, "speed": int(self.speed), "choosen": self.choosen}
+        return {"PosX": int(self.pos[0]), "PosY": int(self.pos[1]), "unique_id": self.unique_id, "speed": int(self.speed), "choosen": self.choosen}
