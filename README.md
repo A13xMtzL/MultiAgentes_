@@ -16,6 +16,7 @@ pip i flask
 
 Deberemos de movernos a la carpeta “Server” con el comando
 `cd .\Server\`
+
 Dentro de la carpeta deberemos de ejecutar el script de nombre 'server.py' con el comando
 ` flask --app server.py run`
 Una vez que hayamos inicializado el servidor, deberemos de tener un mensaje como el siguiente
