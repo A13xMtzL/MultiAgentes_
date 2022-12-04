@@ -26,7 +26,7 @@ public class AgentData
     public int width;
 }
 
-public class AgentController : MonoBehaviour
+public class AgentControllerOptimo : MonoBehaviour
 {
 
     // -------------------
