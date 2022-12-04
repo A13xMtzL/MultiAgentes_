@@ -36,10 +36,13 @@ Nos aseguraremos de estar en la escena con el Nombre "Proyecto"
 ![Unity1](/Server/images/Unity1.png)
 
 En el apartado Hierarchy está un objeto llamado “Managers” donde estarán los dos scripts, uno con la solución Óptima y otra con la solución No óptima.
+
 ![Unity2](/Server/images/Unity2.png)
 
 Si queremos ejecutar una, basta con seleccionarla y activarla en la sección del inspector
+
 ![Unity3](/Server/images/Unity3.png)
 
 Y finalmente para correrla en Unity basta con darle en el botón Play
+
 ![Unity4](/Server/images/Unity4.png)
